@@ -1,0 +1,18 @@
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.front-page',
+    start: '0%',
+    end: '100%',
+    scrub: true,
+    pin: true,
+  },
+})
+
+tl.fromTo(
+  '.front-page',
+  { clipPath: 'circle(5%)' },
+  { clipPath: 'circle(75%)', duration: 3 },
+)
+tl.fromTo('.logo', { scale: 1 }, { scale: 0, opacity: 0, duration: 1 },"-=3")
+tl.fromTo('.title', { opacity: .5 }, { opacity: 1, duration: 1 })
+tl.fromTo('.sub-title', { opacity: .1 }, { opacity: 1, duration: 1 })

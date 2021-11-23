@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Posterama';
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+.front-page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+.front-page .intro-text,
+.front-page .logo,
+.front-page .blend {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.front-page .blend {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+.front-page .logo,
+.front-page .intro-text {
+  z-index: 5;
+}
+.front-page .intro-text h1 {
+  padding-bottom: 0.7rem;
+}
+.front-page .logo {
+  width: 150px;
+}
+@media screen and (max-width: 767px) {
+  .front-page .logo {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 527px) {
+  .front-page .logo {
+    width: 80px;
+  }
+}
+.front-page video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img {
+  width: 100%;
+}
+.second-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+  text-align: center;
+}
+.second-page p {
+  font-size: calc(1vw + 15px);
+}
+.second-page .button {
+  display: block;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  width: calc(20vw + 100px);
+  height: 6vh;
+  font-family: inherit;
+  background: saddlebrown;
+  color: white;
+  box-shadow: 5px 5px 5px 1px black;
+  transition: 0.5s;
+}
+.second-page .button:hover {
+  transform: scale(1.2);
+}
